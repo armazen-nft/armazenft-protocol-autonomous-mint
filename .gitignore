@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+wrangler.toml.local
+*.pem
+*.key
+coverage/
