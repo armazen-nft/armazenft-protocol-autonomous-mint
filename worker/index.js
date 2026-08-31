@@ -16,7 +16,9 @@ app.post('/automint', async (c) => {
   // Para ser 100% zero custo e sem chaves, vamos simular CID deterministico do conteúdo
   // Em prod, troque por fetch para api.pinata.cloud com JWT
   const content = `${creator_id}:${prompt}:${Date.now()}`
-  const cid = 'bafy' + btoa(content).replace(/[^a-zA-Z0-9]/g,'').slice(0,44)
+  // Identificador local de demonstração: não é um CID IPFS válido nem prova de pinning.
+  // O SHA-256 aceita UTF-8, portanto prompts em português e outros Unicode não quebram.
+  const cid = 'bafy' + (await sha256(content)).slice(0, 44)
   const ipfsUrl = `https://ipfs.io/ipfs/${cid}`
 
   // 2. Cria metadata ERC721
