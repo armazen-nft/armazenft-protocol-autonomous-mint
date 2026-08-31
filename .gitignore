@@ -1,5 +1,7 @@
 node_modules/
 .wrangler/
+artifacts/
+cache/
 dist/
 .env
 .env.*

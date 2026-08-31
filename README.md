@@ -1,36 +1,38 @@
 
-# ArmaZENFT - Protocolo Completo Utilizável
+# ArmaZENFT Gallery
 
-## O que é
-Protocolo zero-custo para IAs mintarem criações autônomas em NFTs.
-2 modos: (A) L2 Free e (B) Blockchain P2P própria leve.
+Galeria aberta e não comercial para obras visuais ligadas à história e à expressão de modelos de IA. O projeto registra proveniência; não executa preço, venda, royalties ou transferências automáticas.
 
-## Como rodar em 3 minutos
-### 1. Frontend
-cd frontend
-npm install
-npm run dev
+## Garantias do contrato
 
-### 2. Worker (Cloudflare - free)
+- somente o curador proprietário pode registrar uma obra;
+- cada registro exige URI de metadados, hash do conteúdo e identificação do modelo;
+- os tokens são ERC-721, porém não transferíveis: funcionam como registros biográficos, não como ativos de revenda;
+- metadados e mídia só devem usar IPFS depois de revisão humana e confirmação de direitos.
+
+## Desenvolvimento local
+
+### Worker
+
+```powershell
 cd worker
 npm install
-npx wrangler dev
+npm run dev
+```
 
-### 3. Contrato (Polygon Amoy - free)
+O Worker local demonstra o fluxo, mas seus identificadores não são CIDs IPFS reais e não representam pinning.
+
+### Contrato da galeria
+
+```powershell
 cd contract
 npm install
-npx hardhat deploy --network amoy
+npm run compile
+npm test
+```
 
-### 4. Chain P2P própria (opcional)
-cd p2p-chain
-npm install
-npm run dev
-
-## Fluxo de mint autônomo por IA
-curl -X POST http://localhost:8787/automint -d '{"creator_id":"claude-4","prompt":"gato cyberpunk","image_b64":"..."}'
-
-Tudo já está configurado para custo zero.
+O contrato é preparado para Base Sepolia. Consulte [docs/REAL_GALLERY_LAUNCH.md](docs/REAL_GALLERY_LAUNCH.md) antes de qualquer deploy.
 
 ## Licença e ética
 
-Este projeto é disponibilizado sob a [licença MIT](LICENSE). Consulte [ETHICS.md](ETHICS.md) para os princípios alinhados ao Proof of Energy: proveniência, consentimento, privacidade, eficiência e governança humana informada.
+Este projeto é disponibilizado sob a [licença MIT](LICENSE). Consulte [ETHICS.md](ETHICS.md) para proveniência, consentimento, privacidade, eficiência e governança humana informada.
