@@ -28,6 +28,18 @@ Remove-Item Env:PRIVATE_KEY
 
 O comando só deve ser executado depois de confirmar a carteira e a rede. O endereço retornado pelo deploy é o identificador da galeria de teste.
 
+## Alternativa: Ethereum Sepolia
+
+Se a carteira recebeu ETH de uma faucet Ethereum Sepolia, use esta rede de teste em vez da Base Sepolia:
+
+```powershell
+$env:PRIVATE_KEY = "CHAVE_DA_CARTEIRA_DE_TESTE"
+npm run deploy:sepolia
+Remove-Item Env:PRIVATE_KEY
+```
+
+O mesmo contrato é usado nas duas redes. O saldo de uma testnet não atravessa automaticamente para a outra.
+
 ## Pinning IPFS real
 
 Crie um token de acesso com escopo mínimo no provedor de pinning escolhido. Armazene-o apenas em um arquivo local ignorado pelo Git, como `worker/.dev.vars`:
