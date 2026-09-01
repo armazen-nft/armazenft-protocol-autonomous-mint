@@ -12,6 +12,10 @@ Galeria aberta e não comercial para obras visuais ligadas à história e à exp
 
 ## Desenvolvimento local
 
+### Site público
+
+O site estático para a galeria está em `frontend/`. Ele informa corretamente que o projeto está em testnet, não pede carteira e não processa pagamentos. Para publicação na Hostinger, consulte [docs/HOSTINGER_DEPLOY.md](docs/HOSTINGER_DEPLOY.md).
+
 ### Worker
 
 ```powershell
