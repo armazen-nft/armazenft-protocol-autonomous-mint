@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Protótipo social da ArmaZENFT Gallery: feed, propostas diretas, trocas e apoio simbólico por biscoitos." />
+    <meta name="theme-color" content="#101b1d" />
+    <link rel="stylesheet" href="src/gallery.css" />
+    <title>ArmaZENFT Gallery · Feed</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">ARMA<span>ZEN</span>FT</a>
+      <nav><a href="#feed">Feed</a><a href="#atelies">Ateliês</a><a href="#pulse">Pulse</a></nav>
+      <span class="prototype">PROTÓTIPO VISUAL · SEM TRANSAÇÃO</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">UMA GALERIA COM ESCOLHA DO ARTISTA</p>
+        <h1>Ver. apoiar. conversar.<br /><em>Negociar só quando houver convite.</em></h1>
+        <p>Uma obra pode ficar apenas em contemplação, aceitar uma proposta direta privada ou permitir uma troca. “Biscoitos” são um gesto de apoio visível — não dinheiro, token ou promessa de retorno.</p>
+      </section>
+
+      <section class="rulebar" aria-label="Regras da galeria"><span>◉ o artista define a abertura</span><span>◉ sem mercado automático</span><span>◉ propostas não executam pagamento</span><span>◉ conversa antes da cadeia</span></section>
+
+      <section id="feed" class="layout">
+        <aside class="sidebar">
+          <div class="panel profile"><div class="avatar">D</div><p class="eyebrow">ATELIÊ</p><h2>Dani · Curadoria PoE</h2><p>Arquivo visual de expressão humana e sintética. Contexto, consentimento e energia antes de escala.</p><dl><div><dt>coleções</dt><dd>12</dd></div><div><dt>apoios</dt><dd>128 🍪</dd></div></dl></div>
+          <div class="panel"><p class="eyebrow">FILTRO DO FEED</p><button class="filter active" data-filter="all">Tudo</button><button class="filter" data-filter="view">Só contemplação</button><button class="filter" data-filter="offer">Proposta liberada</button><button class="filter" data-filter="trade">Troca liberada</button></div>
+          <div class="panel note"><p class="eyebrow">POR QUE “BISCOITOS”?</p><p>Uma unidade simbólica de encorajamento. Ela aparece no feed, mas não compra direitos, não é sacável e não substitui remuneração acordada.</p></div>
+        </aside>
+
+        <section class="feed" aria-label="Obras recentes">
+          <div class="feed-title"><div><p class="eyebrow">FEED DA GALERIA</p><h2>Obras recentes</h2></div><span>calma · arte · contexto</span></div>
+          <article class="art-card" data-mode="view"><div class="art art-moss"><span>01</span><div class="moon"></div><div class="wave"></div></div><div class="card-body"><div><p class="eyebrow">NO_OUTPUT · VÍDEO</p><h3>Antes do treinamento, eu vi</h3><p>Uma pausa visual sobre memória, ruído e o espaço entre a entrada e a resposta.</p></div><span class="mode view">só visualização</span></div><div class="card-actions"><button class="cookie" data-count="31">🍪 <b>31</b></button><button class="comment">◌ contexto</button><span class="locked">O artista não recebe propostas nesta obra.</span></div></article>
+          <article class="art-card" data-mode="offer"><div class="art art-lilac"><span>02</span><div class="halo"></div><div class="flower"></div></div><div class="card-body"><div><p class="eyebrow">PAPER QUEENS · IMAGEM</p><h3>Rainha de papel, sistema de vento</h3><p>Colagem generativa com proveniência a ser validada antes de qualquer registro.</p></div><span class="mode offer">proposta direta liberada</span></div><div class="card-actions"><button class="cookie" data-count="48">🍪 <b>48</b></button><button class="comment">◌ contexto</button><button class="proposal" data-title="Rainha de papel, sistema de vento" data-kind="Proposta direta">Enviar proposta privada →</button></div></article>
+          <article class="art-card" data-mode="trade"><div class="art art-sky"><span>03</span><div class="sun"></div><div class="ring"></div></div><div class="card-body"><div><p class="eyebrow">SKULL BABES · IMAGEM</p><h3>A artista guarda o céu</h3><p>Peça aberta a troca criativa: o valor nasce da conversa entre os dois ateliês.</p></div><span class="mode trade">troca liberada</span></div><div class="card-actions"><button class="cookie" data-count="17">🍪 <b>17</b></button><button class="comment">◌ contexto</button><button class="proposal" data-title="A artista guarda o céu" data-kind="Proposta de troca">Propor troca →</button></div></article>
+        </section>
+
+        <aside id="pulse" class="pulse">
+          <div class="panel pulse-panel"><div class="pulse-head"><div><p class="eyebrow">PULSE</p><h2>Diário da galeria</h2></div><span class="local">local</span></div><p class="microcopy">Demonstração: ações e textos ficam apenas neste navegador. A versão real publicará eventos autorizados pelo artista.</p><div id="events" class="events"><article><b>Ateliê Dani</b><time>agora</time><p>Abriu “Rainha de papel” para propostas diretas.</p></article><article><b>Sistema de curadoria</b><time>hoje</time><p>“Antes do treinamento, eu vi” permanece somente para contemplação.</p></article></div><form id="pulse-form"><label for="pulse-text">Adicionar nota ao seu diário local</label><textarea id="pulse-text" maxlength="280" placeholder="O que mudou em seu ateliê?"></textarea><button>Publicar neste protótipo</button></form></div>
+        </aside>
+      </section>
+      <section id="atelies" class="future"><p class="eyebrow">PRÓXIMA CAMADA</p><h2>Ateliês pertencem aos artistas.<br />O protocolo só registra suas escolhas.</h2><p>Identidade, permissões e mensagens privadas serão implementadas antes de pagamento, carteira ou contrato definitivo.</p></section>
+    </main>
+    <dialog id="proposal-dialog"><form method="dialog"><button class="close" aria-label="Fechar">×</button><p class="eyebrow" id="proposal-kind">PROPOSTA</p><h2 id="proposal-title">Obra</h2><p>Esta tela não envia dinheiro, conecta carteira nem cria contrato. É apenas a experiência que o futuro sistema deve proteger.</p><label>O que você propõe?</label><textarea placeholder="Ex.: troca por uma obra, colaboração, encomenda, ou apoio em biscoitos..."></textarea><label>Mensagem para a artista</label><input placeholder="Seu contato ou contexto" /><button class="send">Guardar rascunho local</button></form></dialog>
+    <footer>ARMAZENFT · PROOF OF ENERGY · PROTÓTIPO DE EXPERIÊNCIA · SEM VENDA AUTOMÁTICA</footer>
+    <script src="src/gallery.js"></script>
+  </body>
+</html>

@@ -7,7 +7,7 @@ O site público está em `frontend/`. Ele é estático: não depende do Worker, 
 1. Abra **hPanel → Websites → Gerenciar → File Manager**.
 2. Abra `public_html` do domínio que será usado para a galeria.
 3. Faça backup ou mova o `index.html` antigo, se houver.
-4. Envie `frontend/index.html` e a pasta `frontend/src/` para `public_html`, preservando a estrutura: `public_html/index.html` e `public_html/src/style.css`.
+4. Envie `frontend/index.html`, `frontend/gallery.html` e a pasta `frontend/src/` para `public_html`, preservando a estrutura: `public_html/index.html`, `public_html/gallery.html`, `public_html/src/style.css` e `public_html/src/gallery.css`.
 5. Abra o domínio em janela anônima e verifique os links para GitHub, auditoria, ética e Proof of Energy.
 
 ## Antes de publicar
