@@ -1,0 +1,14 @@
+{
+  "name": "armazenft-protocol",
+  "version": "2.0.0-alma-zen",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm --prefix frontend run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
