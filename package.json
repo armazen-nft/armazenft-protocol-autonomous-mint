@@ -1,14 +1,23 @@
 {
-  "name": "armazenft-protocol",
-  "version": "2.0.0-alma-zen",
+  "name": "armazenft-protocol-autonomous-mint",
+  "version": "1.1.0",
+  "private": true,
   "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm --prefix frontend run build"
+    "build": "npm --prefix frontend install --include=dev && npm --prefix frontend run build",
+    "postinstall": "npm --prefix frontend install --include=dev",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
   }
 }

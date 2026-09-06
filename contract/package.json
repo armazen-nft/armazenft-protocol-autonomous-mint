@@ -1,0 +1,16 @@
+{
+  "name": "armazen-biographic-contract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "solcjs --base-path . --include-path node_modules --bin --abi src/BiographicNFT.sol -o out"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "solc": "0.8.30"
+  },
+  "overrides": {
+    "tmp": "^0.2.6"
+  }
+}

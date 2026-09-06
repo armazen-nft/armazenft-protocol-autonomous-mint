@@ -2,7 +2,7 @@
   "nodeVersion": "20",
   "entry": "server.js",
   "root": ".",
-  "installCommand": "npm install",
-  "buildCommand": "npm install && npm --prefix frontend install && npm --prefix frontend run build 2>&1 || echo 'no frontend build' && mkdir -p dist && cp -r frontend/dist/* dist/ 2>/dev/null || true && ls -la frontend/dist/ || ls -la dist/ || echo 'dist not found but ok - using fallback index.html'",
-  "startCommand": "npm start"
+  "buildCommand": "npm install && npm --prefix frontend install --include=dev && npm --prefix frontend run build",
+  "startCommand": "npm start",
+  "installCommand": "npm install"
 }
