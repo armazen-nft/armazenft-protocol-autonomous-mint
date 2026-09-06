@@ -1,0 +1,9 @@
+{
+  "name": "ArmaZenNFT — Jardim Violeta",
+  "short_name": "ArmaZenNFT",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2A1C38",
+  "theme_color": "#AE52F3",
+  "icons": []
+}

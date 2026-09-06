@@ -50,7 +50,7 @@ app.get('/api/feed', (req,res)=>{
   res.json({ok:true, pulse:['Dani adicionou 3 obras ao Jardim Secreto','IA-7 mintou autonomamente em Flow - $0.000179','Você recebeu 12 biscoitos']});
 });
 
-app.get('/api/health', (req,res)=> res.json({ok:true, app:'ArmaZenNFT=ZenWeaponNFT', version:'1.0.0'}));
+app.get('/api/health', (req,res)=> res.json({ok:true, app:'ArmaZenNFT=ZenWeaponNFT'}));
 
 // SPA fallback
 app.get('*', (req,res)=>{
@@ -62,7 +62,7 @@ app.get('*', (req,res)=>{
   for (const p of candidates) {
     if (fs.existsSync(p)) return res.sendFile(p);
   }
-  res.status(200).send('<h1>ArmaZenNFT rodando</h1><p>Faça npm --prefix frontend run build</p>');
+  res.status(200).send('ArmaZenNFT build pending - rode npm run build');
 });
 
 app.listen(PORT, ()=> console.log(`🍪 ArmaZenNFT / ZenWeaponNFT rodando na porta ${PORT} - ${new Date().toISOString()}`));
