@@ -1,0 +1,8 @@
+{
+  "nodeVersion": "20",
+  "entry": "server.js",
+  "root": ".",
+  "buildCommand": "npm install && npm --prefix frontend install && npm --prefix frontend run build",
+  "startCommand": "npm start",
+  "installCommand": "npm install"
+}
